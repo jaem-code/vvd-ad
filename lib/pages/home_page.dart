@@ -9,14 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Container(
-                color: BLUE_50,
-                child: Text('VVD AD'),
-              ),
-            ),
-          ],
+          slivers: [],
         ),
       ),
     );
