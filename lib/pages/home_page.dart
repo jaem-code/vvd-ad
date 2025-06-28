@@ -10,19 +10,10 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
-            // 모바일 앱 스타일의 앱바
-            SliverAppBar(
-              expandedHeight: 120,
-              floating: false,
-              pinned: true,
-              elevation: 0,
-              backgroundColor: BLUE_50,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text(
-                  'VVD AD',
-                  style: H4_Bold.copyWith(color: GREY_950),
-                ),
-                centerTitle: true,
+            SliverToBoxAdapter(
+              child: Container(
+                color: BLUE_50,
+                child: Text('VVD AD'),
               ),
             ),
           ],

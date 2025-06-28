@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'VVD Mobile',
+      title: '',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Pretendard 폰트를 기본으로 설정
