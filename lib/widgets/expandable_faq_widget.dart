@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../utils/colors.dart';
 import '../utils/typos.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ExpandableFaqWidget extends StatefulWidget {
   final String question;
-  final String answer;
+  final String? answer;
+  final String? imageUrl;
   final Color? backgroundColor;
   final Color? questionTextColor;
   final Color? answerTextColor;
@@ -21,7 +23,8 @@ class ExpandableFaqWidget extends StatefulWidget {
   const ExpandableFaqWidget({
     Key? key,
     required this.question,
-    required this.answer,
+    this.answer,
+    this.imageUrl,
     this.backgroundColor,
     this.questionTextColor,
     this.answerTextColor,
@@ -90,7 +93,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
         borderRadius: widget.borderRadius ?? BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: GREY_700.withOpacity(0.1),
             spreadRadius: 1,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -117,7 +120,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                     child: Text(
                       widget.question,
                       style: widget.questionTextStyle ??
-                          B2_Semibold.copyWith(
+                          T3_Medium.copyWith(
                             color: widget.questionTextColor ?? GREY_950,
                           ),
                     ),
@@ -155,18 +158,62 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                 bottom: widget.padding?.bottom ?? 16,
               ),
               child: Container(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.only(top: 12, bottom: 12),
                 decoration: BoxDecoration(
                   color: BLUE_50.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Text(
-                  widget.answer,
-                  style: widget.answerTextStyle ??
-                      B3_Regular.copyWith(
-                        color: widget.answerTextColor ?? GREY_800,
-                        height: 1.5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // 텍스트 답변
+                    Visibility(
+                      visible: widget.answer != null,
+                      child: Text(
+                        widget.answer ?? '',
+                        style: widget.answerTextStyle ??
+                            B3_Regular.copyWith(
+                              color: widget.answerTextColor ?? GREY_800,
+                              height: 1.5,
+                            ),
                       ),
+                    ),
+                    // 이미지가 있는 경우 표시
+                    if (widget.imageUrl != null &&
+                        widget.imageUrl!.isNotEmpty) ...[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl: widget.imageUrl!,
+                          fit: BoxFit.cover,
+                          placeholder: (context, url) => Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                          ),
+                          errorWidget: (context, url, error) => Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Center(
+                              child: Icon(
+                                Icons.error_outline,
+                                color: Colors.grey,
+                                size: 48,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
                 ),
               ),
             ),
@@ -180,26 +227,24 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
 // FAQ 리스트를 위한 편의 위젯
 class FaqListWidget extends StatelessWidget {
   final List<FaqItem> faqItems;
-  final EdgeInsets? padding;
   final Color? backgroundColor;
 
   const FaqListWidget({
     Key? key,
     required this.faqItems,
-    this.padding,
     this.backgroundColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding ?? const EdgeInsets.all(16),
       color: backgroundColor,
       child: Column(
         children: faqItems
             .map((item) => ExpandableFaqWidget(
                   question: item.question,
                   answer: item.answer,
+                  imageUrl: item.imageUrl,
                   leadingIcon: item.icon,
                 ))
             .toList(),
@@ -211,12 +256,14 @@ class FaqListWidget extends StatelessWidget {
 // FAQ 아이템 데이터 클래스
 class FaqItem {
   final String question;
-  final String answer;
+  final String? answer;
+  final String? imageUrl;
   final Widget? icon;
 
   const FaqItem({
     required this.question,
-    required this.answer,
+    this.answer,
+    this.imageUrl,
     this.icon,
   });
 }

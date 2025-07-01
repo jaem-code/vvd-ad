@@ -1,323 +1,256 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vvd_ad/utils/colors.dart';
 import '../utils/typos.dart';
-import '../widgets/overlay_image_widget.dart';
 import '../widgets/expandable_faq_widget.dart';
 
 class ProductAPage extends StatelessWidget {
   static const String topBannerImageUrl =
-      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/a798a44c-a7de-4799-a30d-ec6cd7b9db87-e48525cd-aeb6-4d29-9cf4-09832c5f6073.png';
+      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/f4c8cd87-1358-4337-801a-72ab3e3d7ba9-8b034ec2-9e44-4691-bf9f-d5d932e543fb.png';
 
-  static const String consultationButton =
-      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/74b1f1e2-ff09-4273-8822-17b544757e20-9188134f-46a0-4e23-9cf0-d1c6b92936b2.png';
-
-  static const String bodyBannerFirst =
-      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/09c65679-820f-48f8-aef2-4a8dbc41b76e-bc0cb8e7-3a10-47ea-8979-dff730a38200.png';
-
-  static const String companyLogoUrl =
-      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/company-logo.png';
   static const bool showLogoOverlay = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            // 모바일 최적화 앱바
-            SliverAppBar(
-              expandedHeight: 60,
-              floating: true,
-              pinned: true,
-              elevation: 1,
-              backgroundColor: BLUE_50,
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '🐥삐약',
-                    style: T2_Semibold.copyWith(color: GREY_950),
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'X',
-                    style: T2_Semibold.copyWith(color: GREY_950),
-                  ),
-                  SizedBox(width: 8),
-                  Flexible(
-                    child: Text(
-                      '단 한가지 의원 단독 이벤트',
-                      style: T2_Semibold.copyWith(color: GREY_950),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ],
-              ),
-              centerTitle: true,
-            ),
-
-            SliverToBoxAdapter(
-              child: Container(
-                color: BLUE_50,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      height: 300,
-                      child: OverlayImageWidget(
-                        borderRadius: BorderRadius.zero,
-                        imageUrl: topBannerImageUrl,
-                        overlayImageUrl: topBannerImageUrl,
-                        showOverlay: showLogoOverlay,
-                        width: double.infinity,
-                        height: 300,
+      body: Stack(
+        children: [
+          SafeArea(
+            child: CustomScrollView(
+              slivers: [
+                // 모바일 최적화 앱바
+                SliverAppBar(
+                  expandedHeight: 60,
+                  floating: true,
+                  pinned: true,
+                  elevation: 1,
+                  backgroundColor: BLUE_50,
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '🐥삐약',
+                        style: T2_Semibold.copyWith(color: GREY_950),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Wrap(
-                            alignment: WrapAlignment.center,
-                            crossAxisAlignment: WrapCrossAlignment.center,
-                            children: [
-                              Text(
-                                '🐥삐약',
-                                style: H4_Semibold.copyWith(color: GREY_950),
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                'X',
-                                style: H4_Semibold.copyWith(color: GREY_950),
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                '단 한가지 의원 단독 이벤트',
-                                style: H4_Semibold.copyWith(color: GREY_950),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 20),
-                          Row(
+                      SizedBox(width: 8),
+                      Text(
+                        'X',
+                        style: T2_Semibold.copyWith(color: GREY_950),
+                      ),
+                      SizedBox(width: 8),
+                      Flexible(
+                        child: Text(
+                          '단 한가지의원 이벤트',
+                          style: T2_Semibold.copyWith(color: GREY_950),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  centerTitle: true,
+                ),
+
+                SliverToBoxAdapter(
+                  child: Container(
+                    color: BLUE_50,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          color: YELLOW_600,
+                          width: double.infinity,
+                          height: 82,
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Expanded(
-                                child: Text(
-                                  ' 본 이벤트는 🐥삐약 단독 이벤트 입니다. 반드시 상담 신청 후, 병원을 내원해 주세요!',
-                                  style: T2_Medium.copyWith(color: GREY_950),
-                                ),
+                              Text(
+                                '본 이벤트는 삐약 단독 이벤트 입니다.',
+                                style: T2_Semibold.copyWith(color: GREY_950),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                '반드시 상담 신청 후 병원을 내원해주세요!',
+                                style: T2_Semibold.copyWith(color: GREY_950),
                               ),
                             ],
                           ),
-                          SizedBox(height: 20),
-                          GestureDetector(
-                            onTap: () async {
-                              final Uri url = Uri.parse(
-                                  'https://walla.my/v/O75LxDLCRbOHAJzIsPGs');
-                              if (await canLaunchUrl(url)) {
-                                await launchUrl(url,
-                                    mode: LaunchMode.externalApplication);
-                              } else {
-                                // 에러 처리
-                                if (context.mounted) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                      content: Text('링크를 열 수 없습니다.'),
-                                    ),
-                                  );
-                                }
-                              }
-                            },
-                            child: Container(
-                              width: double.infinity,
-                              margin: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: GREY_700.withOpacity(0.2),
-                                    spreadRadius: 2,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 4),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 422,
+                          child:
+                              CachedNetworkImage(imageUrl: topBannerImageUrl),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 337,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/865b7900-72d2-46e9-900f-73184017aaa7-a87a8335-3ade-408b-88f2-c34f7ae11764.png'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 509,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/4fd8fced-ebd4-43d9-8e15-ebd94082f047-fd3746d0-c27f-4d93-b386-d9dbee8a4c5f.png'),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // FAQ 섹션 추가
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 0, vertical: 4),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  FaqListWidget(
+                                    faqItems: [
+                                      FaqItem(
+                                        question: 'BWA ON 상세',
+                                        imageUrl:
+                                            'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/c4c6a3ae-624a-4274-ac4d-afdf641dc4a0-83eed1a7-811d-4720-954b-88426195bd78.png',
+                                        icon: Container(
+                                          width: 24,
+                                          height: 24,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Color.fromRGBO(51, 30, 28, 1),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              '1',
+                                              style: Bt2_Medium.copyWith(
+                                                  color: BLUE_50),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      FaqItem(
+                                        question: '만성음식물 알러지 검사 상세',
+                                        imageUrl:
+                                            'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/54b3e1e0-69ee-4e85-8cf2-232a95182b93-492d044d-9832-46a4-8050-6079d500c455.png',
+                                        icon: Container(
+                                          width: 24,
+                                          height: 24,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Color.fromRGBO(51, 30, 28, 1),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              '2',
+                                              style: Bt2_Medium.copyWith(
+                                                  color: BLUE_50),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      FaqItem(
+                                        question: '고압산소케어 상세',
+                                        imageUrl:
+                                            'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/52c55238-b4d8-4c14-9fe4-eea83af5e59e-69fd1a4d-975b-42ee-88e5-ea8db8fec53a.png',
+                                        icon: Container(
+                                          width: 24,
+                                          height: 24,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Color.fromRGBO(51, 30, 28, 1),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              '3',
+                                              style: Bt2_Medium.copyWith(
+                                                  color: BLUE_50),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: CachedNetworkImage(
-                                  imageUrl: consultationButton,
-                                  fit: BoxFit.cover,
-                                  placeholder: (context, url) => Container(
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          Colors.blue[50]!,
-                                          Colors.blue[100]!
-                                        ],
-                                      ),
-                                    ),
-                                    child: const Center(
-                                      child: CircularProgressIndicator(
-                                        color: YELLOW_500,
-                                      ),
-                                    ),
-                                  ),
-                                  errorWidget: (context, url, error) {
-                                    return Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [],
-                                    );
-                                  },
-                                ),
-                              ),
                             ),
-                          ),
-                          SizedBox(height: 20),
-                          Container(
-                            width: double.infinity,
-                            height: 200,
-                            margin: const EdgeInsets.symmetric(horizontal: 16),
-                            child: OverlayImageWidget(
-                              showOverlay: false,
-                              imageUrl: bodyBannerFirst,
-                              width: double.infinity,
-                              height: 200,
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          GestureDetector(
-                            onTap: () async {
-                              final Uri url = Uri.parse(
-                                  'https://walla.my/v/O75LxDLCRbOHAJzIsPGs');
-                              if (await canLaunchUrl(url)) {
-                                await launchUrl(url,
-                                    mode: LaunchMode.externalApplication);
-                              } else {
-                                // 에러 처리
-                                if (context.mounted) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                      content: Text('링크를 열 수 없습니다.'),
-                                    ),
-                                  );
-                                }
-                              }
-                            },
-                            child: Container(
-                              width: double.infinity,
-                              margin: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: GREY_700.withOpacity(0.2),
-                                    spreadRadius: 2,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: CachedNetworkImage(
-                                  imageUrl: consultationButton,
-                                  fit: BoxFit.cover,
-                                  placeholder: (context, url) => Container(
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          Colors.blue[50]!,
-                                          Colors.blue[100]!
-                                        ],
-                                      ),
-                                    ),
-                                    child: const Center(
-                                      child: CircularProgressIndicator(
-                                        color: YELLOW_500,
-                                      ),
-                                    ),
-                                  ),
-                                  errorWidget: (context, url, error) {
-                                    return Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [],
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 20),
-
-                          // FAQ 섹션 추가
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '자주 묻는 질문',
-                                  style: H4_Semibold.copyWith(color: GREY_950),
-                                ),
-                                SizedBox(height: 16),
-                                FaqListWidget(
-                                  padding: EdgeInsets.zero,
-                                  faqItems: [
-                                    FaqItem(
-                                      question: '영양 상담은 어떤 시스템인가요?',
-                                      answer:
-                                          '전문 영양사가 1:1로 맞춤형 영양 상담을 제공합니다. 개인의 건강 상태, 생활 패턴, 목표에 따라 최적의 영양 계획을 수립해드립니다.',
-                                      icon: Icon(Icons.help_outline,
-                                          color: GREY_950, size: 20),
-                                    ),
-                                    FaqItem(
-                                      question: '상담 시간은 얼마나 걸리나요?',
-                                      answer:
-                                          '초회 상담은 약 60분, 후속 상담은 30분 정도 소요됩니다. 충분한 시간을 두고 꼼꼼히 상담해드립니다.',
-                                      icon: Icon(Icons.schedule,
-                                          color: GREY_950, size: 20),
-                                    ),
-                                    FaqItem(
-                                      question: '온라인 상담도 가능한가요?',
-                                      answer:
-                                          '네, 화상 통화를 통한 온라인 상담도 가능합니다. 대면 상담과 동일한 품질의 서비스를 제공합니다.',
-                                      icon: Icon(Icons.video_call,
-                                          color: GREY_950, size: 20),
-                                    ),
-                                    FaqItem(
-                                      question: '상담 후 관리는 어떻게 되나요?',
-                                      answer:
-                                          '상담 후 개인별 맞춤 식단표와 영양 가이드를 제공하며, 정기적인 팔로업을 통해 지속적으로 관리해드립니다.',
-                                      icon: Icon(Icons.support_agent,
-                                          color: GREY_950, size: 20),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-
-                          SizedBox(height: 40),
-                        ],
-                      ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 733,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/8ba663df-7f16-4eb1-925b-a1b8c3129a6d-564ac5e2-0cf1-4504-986e-a2a91808d311.png'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 385,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/612f7e94-a923-4574-a7a6-49e28797a4f3-7be0578b-9986-4212-873c-69fea038d11a.png'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 613,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/169235b3-9534-4146-80c9-6481fc0a5a4f-e76b16f1-db28-454c-96d2-6bb9797ae17c.png'),
+                        ),
+                        SizedBox(height: 80),
+                      ],
                     ),
-                  ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // 플로팅 버튼을 Stack으로 구현
+          Positioned(
+            left: 16,
+            right: 16,
+            bottom: 16,
+            child: Container(
+              width: 328,
+              height: 60,
+              child: ElevatedButton(
+                onPressed: () async {
+                  final Uri url =
+                      Uri.parse('https://walla.my/v/O75LxDLCRbOHAJzIsPGs');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  } else {
+                    // 에러 처리
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('링크를 열 수 없습니다.'),
+                        ),
+                      );
+                    }
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: YELLOW_600,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  elevation: 4,
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                ),
+                child: Text(
+                  '상담 신청',
+                  style: T1_Bold.copyWith(
+                    color: GREY_950,
+                  ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
