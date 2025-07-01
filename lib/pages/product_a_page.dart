@@ -214,7 +214,7 @@ class _ProductAPageState extends State<ProductAPage> {
                               imageUrl:
                                   'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/169235b3-9534-4146-80c9-6481fc0a5a4f-e76b16f1-db28-454c-96d2-6bb9797ae17c.png'),
                         ),
-                        SizedBox(height: 80),
+                        SizedBox(height: 92),
                       ],
                     ),
                   ),
