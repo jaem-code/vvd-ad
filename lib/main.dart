@@ -167,7 +167,7 @@ class MyApp extends StatelessWidget {
         if (kIsWeb) {
           return Center(
             child: Container(
-              width: 360,
+              width: 360.w,
               constraints: BoxConstraints(
                 minHeight: MediaQuery.of(context).size.height,
               ),

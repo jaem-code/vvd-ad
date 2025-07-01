@@ -98,7 +98,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
       margin: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
         color: widget.backgroundColor ?? Colors.white,
-        borderRadius: widget.borderRadius ?? BorderRadius.circular(12),
+        borderRadius: widget.borderRadius ?? BorderRadius.circular(4),
         boxShadow: [
           BoxShadow(
             color: GREY_700.withOpacity(0.1),
@@ -113,9 +113,11 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
           // 질문 부분 (항상 표시)
           InkWell(
             onTap: _toggleExpanded,
-            borderRadius: widget.borderRadius ?? BorderRadius.circular(12),
+            borderRadius: widget.borderRadius ?? BorderRadius.circular(4),
             child: Padding(
-              padding: widget.padding ?? const EdgeInsets.all(16),
+              padding: widget.padding ??
+                  const EdgeInsets.only(
+                      left: 16, right: 16, top: 16, bottom: 16),
               child: Row(
                 children: [
                   // 선택적 아이콘
@@ -161,15 +163,15 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
             child: Container(
               width: double.infinity,
               padding: EdgeInsets.only(
-                left: widget.padding?.left ?? 16,
-                right: widget.padding?.right ?? 16,
-                bottom: widget.padding?.bottom ?? 16,
+                left: 8,
+                right: 8,
+                bottom: 8,
               ),
               child: Container(
                 padding: const EdgeInsets.only(top: 12, bottom: 12),
                 decoration: BoxDecoration(
                   color: BLUE_50.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(4),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,6 +194,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: CachedNetworkImage(
+                          width: double.infinity,
                           imageUrl: widget.imageUrl!,
                           fit: BoxFit.cover,
                           placeholder: (context, url) => Container(

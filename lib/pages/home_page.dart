@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:vvd_ad/utils/colors.dart';
-import '../utils/typos.dart';
 
 class HomePage extends StatelessWidget {
   @override
