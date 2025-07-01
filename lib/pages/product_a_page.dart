@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vvd_ad/services/web_analytics_service.dart';
@@ -6,6 +7,7 @@ import 'package:vvd_ad/services/web_analytics_service.dart';
 import 'package:vvd_ad/utils/colors.dart';
 import '../utils/typos.dart';
 import '../widgets/expandable_faq_widget.dart';
+import 'dart:html' as html;
 
 class ProductAPage extends StatefulWidget {
   static const String topBannerImageUrl =
@@ -245,18 +247,27 @@ class _ProductAPageState extends State<ProductAPage> {
                     pageName: 'ProductAPage',
                   );
 
-                  final Uri url =
-                      Uri.parse('https://walla.my/v/O75LxDLCRbOHAJzIsPGs');
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  final String urlString =
+                      'https://walla.my/v/O75LxDLCRbOHAJzIsPGs';
+
+                  if (kIsWeb) {
+                    // 웹뷰에서는 JavaScript window.open 사용
+                    html.window.open(urlString, '_blank');
                   } else {
-                    // 에러 처리
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('링크를 열 수 없습니다.'),
-                        ),
-                      );
+                    // 네이티브 앱에서는 url_launcher 사용
+                    final Uri url = Uri.parse(urlString);
+                    if (await canLaunchUrl(url)) {
+                      await launchUrl(url,
+                          mode: LaunchMode.externalApplication);
+                    } else {
+                      // 에러 처리
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('링크를 열 수 없습니다.'),
+                          ),
+                        );
+                      }
                     }
                   }
                 },
