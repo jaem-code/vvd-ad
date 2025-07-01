@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        Widget app = MaterialApp.router(
-          title: '',
+        final app = MaterialApp.router(
+          title: 'VVD Ad',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             // Pretendard 폰트를 기본으로 설정

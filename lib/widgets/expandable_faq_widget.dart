@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/colors.dart';
 import '../utils/typos.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../services/web_analytics_service.dart';
 
 class ExpandableFaqWidget extends StatefulWidget {
   final String question;
@@ -19,6 +20,7 @@ class ExpandableFaqWidget extends StatefulWidget {
   final Widget? leadingIcon;
   final Widget? expandIcon;
   final Widget? collapseIcon;
+  final int? faqIndex; // Analytics를 위한 인덱스 추가
 
   const ExpandableFaqWidget({
     Key? key,
@@ -37,6 +39,7 @@ class ExpandableFaqWidget extends StatefulWidget {
     this.leadingIcon,
     this.expandIcon,
     this.collapseIcon,
+    this.faqIndex,
   }) : super(key: key);
 
   @override
@@ -78,6 +81,11 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
       _isExpanded = !_isExpanded;
       if (_isExpanded) {
         _animationController.forward();
+        // FAQ 클릭 Analytics 추적 - 필수 파라미터 추가
+        WebAnalyticsService.logFaqClick(
+          faqQuestion: widget.question,
+          faqIndex: widget.faqIndex ?? 0,
+        );
       } else {
         _animationController.reverse();
       }
@@ -246,6 +254,7 @@ class FaqListWidget extends StatelessWidget {
                   answer: item.answer,
                   imageUrl: item.imageUrl,
                   leadingIcon: item.icon,
+                  faqIndex: faqItems.indexOf(item), // 인덱스 전달
                 ))
             .toList(),
       ),

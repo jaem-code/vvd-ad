@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:vvd_ad/services/web_analytics_service.dart';
+
 import 'package:vvd_ad/utils/colors.dart';
 import '../utils/typos.dart';
 import '../widgets/expandable_faq_widget.dart';
@@ -218,6 +220,15 @@ class ProductAPage extends StatelessWidget {
               height: 60,
               child: ElevatedButton(
                 onPressed: () async {
+                  // 수정 후
+                  WebAnalyticsService.logConsultationRequest(
+                    source: 'floating_button',
+                  );
+                  WebAnalyticsService.logButtonClick(
+                    buttonName: '상담 신청',
+                    pageName: 'ProductAPage',
+                  );
+
                   final Uri url =
                       Uri.parse('https://walla.my/v/O75LxDLCRbOHAJzIsPGs');
                   if (await canLaunchUrl(url)) {
