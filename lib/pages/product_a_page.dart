@@ -45,32 +45,6 @@ class _ProductAPageState extends State<ProductAPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          height: 48,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                '🐥삐약',
-                                style: T2_Semibold.copyWith(color: GREY_950),
-                              ),
-                              SizedBox(width: 8),
-                              Text(
-                                'X',
-                                style: T2_Semibold.copyWith(color: GREY_950),
-                              ),
-                              SizedBox(width: 8),
-                              Flexible(
-                                child: Text(
-                                  '단 한가지의원 이벤트',
-                                  style: T2_Semibold.copyWith(color: GREY_950),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                         Container(
                           color: YELLOW_600,
                           width: double.infinity,

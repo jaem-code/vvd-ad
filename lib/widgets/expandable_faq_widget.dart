@@ -98,10 +98,10 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
       margin: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
         color: widget.backgroundColor ?? Colors.white,
-        borderRadius: widget.borderRadius ?? BorderRadius.circular(4),
+        borderRadius: widget.borderRadius ?? BorderRadius.circular(0),
         boxShadow: [
           BoxShadow(
-            color: GREY_700.withOpacity(0.1),
+            color: GREY_700.withValues(alpha: 0.1),
             spreadRadius: 1,
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -113,7 +113,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
           // 질문 부분 (항상 표시)
           InkWell(
             onTap: _toggleExpanded,
-            borderRadius: widget.borderRadius ?? BorderRadius.circular(4),
+            borderRadius: widget.borderRadius ?? BorderRadius.circular(0),
             child: Padding(
               padding: widget.padding ??
                   const EdgeInsets.only(
@@ -163,15 +163,15 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
             child: Container(
               width: double.infinity,
               padding: EdgeInsets.only(
-                left: 8,
-                right: 8,
+                left: 0,
+                right: 0,
                 bottom: 8,
               ),
               child: Container(
                 padding: const EdgeInsets.only(top: 12, bottom: 12),
                 decoration: BoxDecoration(
-                  color: BLUE_50.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(4),
+                  color: BLUE_50.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(0),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,7 +192,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                     if (widget.imageUrl != null &&
                         widget.imageUrl!.isNotEmpty) ...[
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(0),
                         child: CachedNetworkImage(
                           width: double.infinity,
                           imageUrl: widget.imageUrl!,
@@ -201,7 +201,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                             height: 200,
                             decoration: BoxDecoration(
                               color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(0),
                             ),
                             child: const Center(
                               child: CircularProgressIndicator(),
@@ -211,7 +211,7 @@ class _ExpandableFaqWidgetState extends State<ExpandableFaqWidget>
                             height: 200,
                             decoration: BoxDecoration(
                               color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(0),
                             ),
                             child: const Center(
                               child: Icon(
