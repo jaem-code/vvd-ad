@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart';
 import 'pages/home_page.dart';
 import 'pages/product_a_page.dart';
-import 'pages/product_b_page.dart';
 import 'utils/typos.dart';
 
 void main() {
@@ -30,7 +29,6 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(path: '/', builder: (context, state) => HomePage()),
       GoRoute(path: '/a', builder: (context, state) => ProductAPage()),
-      GoRoute(path: '/b', builder: (context, state) => ProductBPage()),
     ],
   );
 

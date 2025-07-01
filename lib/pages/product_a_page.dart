@@ -7,11 +7,27 @@ import 'package:vvd_ad/utils/colors.dart';
 import '../utils/typos.dart';
 import '../widgets/expandable_faq_widget.dart';
 
-class ProductAPage extends StatelessWidget {
+class ProductAPage extends StatefulWidget {
   static const String topBannerImageUrl =
       'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/f4c8cd87-1358-4337-801a-72ab3e3d7ba9-8b034ec2-9e44-4691-bf9f-d5d932e543fb.png';
 
   static const bool showLogoOverlay = true;
+
+  @override
+  State<ProductAPage> createState() => _ProductAPageState();
+}
+
+class _ProductAPageState extends State<ProductAPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    // 페이지 뷰 추적 - initState에서 한 번만 호출
+    WebAnalyticsService.logPageView(
+      pageName: 'ad_ugn365',
+      pageTitle: '단 한가지 병원',
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +98,8 @@ class ProductAPage extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           height: 422,
-                          child:
-                              CachedNetworkImage(imageUrl: topBannerImageUrl),
+                          child: CachedNetworkImage(
+                              imageUrl: ProductAPage.topBannerImageUrl),
                         ),
                         SizedBox(
                           width: double.infinity,
