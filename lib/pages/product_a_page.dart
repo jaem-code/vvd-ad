@@ -80,7 +80,7 @@ class _ProductAPageState extends State<ProductAPage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/4fd8fced-ebd4-43d9-8e15-ebd94082f047-fd3746d0-c27f-4d93-b386-d9dbee8a4c5f.png'),
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/91dcd00e-e27c-4408-b33e-cd0eec7d136f-dd19e8a8-6bb8-4e08-b6b8-9057ec50d1c6.png'),
                         ),
                         Container(
                           color: GREY_150,

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="- vvd-ad&#10;&#10;- 단 한가지 의원 추가&#10;- GA4 추가&#10;- 애플 웹뷰 최적화">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/product_a_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/product_a_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/expandable_faq_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/expandable_faq_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751362337328</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="- vvd-ad&#10;&#10;- 단 한가지 의원 추가&#10;- GA4 추가&#10;- 애플 웹뷰 최적화">
+      <option name="closed" value="true" />
+      <created>1751362765471</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1751362765471</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
