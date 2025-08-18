@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 8),
               Text(
-                '의료진과 함께하는 정확한 정보',
+                '삐약이와 함께하는 비만 및 다이어트 정복',
                 style: B1_Regular.copyWith(color: GREY_600),
               ),
               const SizedBox(height: 24),
