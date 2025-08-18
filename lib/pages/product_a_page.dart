@@ -24,7 +24,7 @@ class _ProductAPageState extends State<ProductAPage> {
   void initState() {
     super.initState();
 
-    // 페이지 뷰 추적 - initState에서 한 번만 호출
+    // 페이지 뷰 추적 - initState에서 한 번만 호출.
     WebAnalyticsService.logPageView(
       pageName: 'ad_ugn365',
       pageTitle: '단 한가지 병원',
