@@ -44,34 +44,11 @@ class _GuidePageState extends State<GuidePage> {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                AspectRatio(
-                  aspectRatio: 360 / 640, // 모바일 비율
+                SizedBox(
+                  width: double.infinity,
                   child: CachedNetworkImage(
                     imageUrl:
                         'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) => Container(
-                      color: Colors.grey[100],
-                      child: const Center(
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                    errorWidget: (context, url, error) {
-                      return Container(
-                        color: Colors.grey[200],
-                        child: const Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.image_not_supported,
-                                  size: 48, color: Colors.grey),
-                              SizedBox(height: 8),
-                              Text('이미지를 불러올 수 없습니다'),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
                   ),
                 ),
               ],

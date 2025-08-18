@@ -44,34 +44,11 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                AspectRatio(
-                  aspectRatio: 360 / 640, // 모바일 비율
+                SizedBox(
+                  width: double.infinity,
                   child: CachedNetworkImage(
                     imageUrl:
                         'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) => Container(
-                      color: Colors.grey[100],
-                      child: const Center(
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                    errorWidget: (context, url, error) {
-                      return Container(
-                        color: Colors.grey[200],
-                        child: const Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.image_not_supported,
-                                  size: 48, color: Colors.grey),
-                              SizedBox(height: 8),
-                              Text('이미지를 불러올 수 없습니다'),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
                   ),
                 ),
               ],

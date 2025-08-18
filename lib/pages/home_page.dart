@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 8),
               Text(
                 '어떤 정보를 찾으시나요?',
                 style: H4_Bold.copyWith(color: GREY_900),
