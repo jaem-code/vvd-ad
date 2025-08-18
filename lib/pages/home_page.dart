@@ -21,10 +21,12 @@ class _HomePageState extends State<HomePage> {
     MetaTags.updateMetaTags(
       title: '국내 1위 다이어트 주사 앱 | 삐약',
       description: '국내 1위 다이어트 주사 플랫폼. 위고비, 마운자로 등 비만치료제 가격 비교 및 병원 정보 제공',
-      keywords: '삐약, VVD Health, 의료 정보, 건강 관리, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤',
+      keywords:
+          '삐약, VVD Health, 의료 정보, 건강 관리, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤',
       imageUrl: 'https://ad.vvd-health.com/favicon.png',
     );
   }
+
   Future<void> _launchURL() async {
     final Uri url = Uri.parse('https://deeplink.vvd-health.com/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
@@ -37,7 +39,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: GREY_50,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: YELLOW_500,
         elevation: 0,
         title: Text(
           '국내 1위 다이어트 주사 앱 | 삐약 ',
@@ -260,91 +262,34 @@ class _HomePageState extends State<HomePage> {
 
               const SizedBox(height: 32),
 
-              // App Install CTA Section
-              Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      GREY_500,
-                      GREY_700,
+              SizedBox(
+                width: double.infinity,
+                height: 56,
+                child: ElevatedButton(
+                  onPressed: _launchURL,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: YELLOW_600,
+                    foregroundColor: BLUE_50,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.download_rounded,
+                        size: 20,
+                        color: BLUE_50,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        '삐약 앱 설치하기',
+                        style: Bt1_Semibold.copyWith(color: BLUE_50),
+                      ),
                     ],
                   ),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Icon(
-                            Icons.phone_iphone,
-                            color: Colors.white,
-                            size: 24,
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '삐약 앱에서 더 많은 기능을',
-                                style:
-                                    T2_Semibold.copyWith(color: Colors.white),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                '실시간 커뮤니티와 맞춤 정보 확인',
-                                style: B3_Regular.copyWith(
-                                  color: Colors.white.withOpacity(0.9),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 48,
-                      child: ElevatedButton(
-                        onPressed: _launchURL,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: YELLOW_600,
-                          foregroundColor: BLUE_50,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 0,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.download_rounded,
-                              size: 20,
-                              color: BLUE_50,
-                            ),
-                            const SizedBox(width: 8),
-                            Text(
-                              '삐약 앱 설치하기',
-                              style: Bt1_Semibold.copyWith(color: BLUE_50),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
 
