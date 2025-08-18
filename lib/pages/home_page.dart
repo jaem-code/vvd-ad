@@ -248,8 +248,8 @@ class HomePage extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      BLUE_600,
-                      BLUE_700,
+                      GREY_500,
+                      GREY_700,
                     ],
                   ),
                   borderRadius: BorderRadius.circular(16),

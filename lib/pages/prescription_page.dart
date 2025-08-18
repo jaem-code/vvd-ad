@@ -31,7 +31,7 @@ class PrescriptionPage extends StatelessWidget {
                     loadingBuilder: (context, child, loadingProgress) {
                       if (loadingProgress == null) return child;
                       return SizedBox(
-                        height: 600.h,
+                        height: 600,
                         child: Center(
                           child: CircularProgressIndicator(
                             value: loadingProgress.expectedTotalBytes != null
@@ -43,8 +43,8 @@ class PrescriptionPage extends StatelessWidget {
                       );
                     },
                     errorBuilder: (context, error, stackTrace) {
-                      return SizedBox(
-                        height: 600.h,
+                      return const SizedBox(
+                        height: 600,
                         child: Center(
                           child: Text('이미지를 불러올 수 없습니다'),
                         ),
@@ -57,7 +57,7 @@ class PrescriptionPage extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            padding: EdgeInsets.all(16.w),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
@@ -70,16 +70,16 @@ class PrescriptionPage extends StatelessWidget {
             ),
             child: Center(
               child: SizedBox(
-                width: 328.w,
-                height: 64.h,
+                width: 328,
+                height: 64,
                 child: ElevatedButton(
                   onPressed: _launchURL,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: YELLOW_600,
                     foregroundColor: BLUE_50,
-                    padding: EdgeInsets.symmetric(vertical: 18.h),
+                    padding: const EdgeInsets.symmetric(vertical: 18),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.r),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     elevation: 4,
                   ),
