@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../utils/colors.dart';
 import '../utils/typos.dart';
 
 class HomePage extends StatelessWidget {
+  Future<void> _launchURL() async {
+    final Uri url = Uri.parse('https://deeplink.vvd-health.com/');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -233,6 +241,95 @@ class HomePage extends StatelessWidget {
               ),
               
               SizedBox(height: 32.h),
+              
+              // App Install CTA Section
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      BLUE_600,
+                      BLUE_700,
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(16.r),
+                ),
+                padding: EdgeInsets.all(20.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10.w),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12.r),
+                          ),
+                          child: Icon(
+                            Icons.phone_iphone,
+                            color: Colors.white,
+                            size: 24.sp,
+                          ),
+                        ),
+                        SizedBox(width: 12.w),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '삐약 앱에서 더 많은 기능을',
+                                style: T2_Semibold.copyWith(color: Colors.white),
+                              ),
+                              SizedBox(height: 4.h),
+                              Text(
+                                '실시간 커뮤니티와 맞춤 정보 확인',
+                                style: B3_Regular.copyWith(
+                                  color: Colors.white.withOpacity(0.9),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20.h),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 48.h,
+                      child: ElevatedButton(
+                        onPressed: _launchURL,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: YELLOW_600,
+                          foregroundColor: BLUE_50,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.r),
+                          ),
+                          elevation: 0,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.download_rounded,
+                              size: 20.sp,
+                              color: BLUE_50,
+                            ),
+                            SizedBox(width: 8.w),
+                            Text(
+                              '삐약 앱 설치하기',
+                              style: Bt1_Semibold.copyWith(color: BLUE_50),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              
+              SizedBox(height: 24.h),
             ],
           ),
         ),
