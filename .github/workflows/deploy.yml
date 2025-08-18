@@ -24,6 +24,11 @@ jobs:
       - name: Build web application
         run: flutter build web --release
 
+      - name: Copy routing files
+        run: |
+          cp web/404.html build/web/404.html
+          cp web/_redirects build/web/_redirects
+
       - name: Check AWS Identity
         run: aws sts get-caller-identity
         env:
