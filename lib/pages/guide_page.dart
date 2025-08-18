@@ -18,46 +18,56 @@ class GuidePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
+      body: Column(
         children: [
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                Image.network(
-                  'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
-                  width: double.infinity,
-                  fit: BoxFit.fitWidth,
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return SizedBox(
-                      height: 600.h,
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          value: loadingProgress.expectedTotalBytes != null
-                              ? loadingProgress.cumulativeBytesLoaded /
-                                  loadingProgress.expectedTotalBytes!
-                              : null,
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.network(
+                    'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+                    width: double.infinity,
+                    fit: BoxFit.fitWidth,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return SizedBox(
+                        height: 600.h,
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                    loadingProgress.expectedTotalBytes!
+                                : null,
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                  errorBuilder: (context, error, stackTrace) {
-                    return SizedBox(
-                      height: 600.h,
-                      child: Center(
-                        child: Text('이미지를 불러올 수 없습니다'),
-                      ),
-                    );
-                  },
-                ),
-                SizedBox(height: 100.h),
-              ],
+                      );
+                    },
+                    errorBuilder: (context, error, stackTrace) {
+                      return SizedBox(
+                        height: 600.h,
+                        child: Center(
+                          child: Text('이미지를 불러올 수 없습니다'),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
-          Positioned(
-            bottom: 20.h,
-            left: 16.w,
-            right: 16.w,
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.all(16.w),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  offset: Offset(0, -2),
+                  blurRadius: 4,
+                ),
+              ],
+            ),
             child: Center(
               child: SizedBox(
                 width: 328.w,
