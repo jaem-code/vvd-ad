@@ -46,7 +46,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
                 AspectRatio(
                   aspectRatio: 360 / 640, // 모바일 비율
                   child: CachedNetworkImage(
-                    imageUrl: 'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
+                    imageUrl: 'https://images.vvd-health.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
                     fit: BoxFit.cover,
                     httpHeaders: const {
                       'Accept': 'image/png,image/*,*/*',

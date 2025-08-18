@@ -46,7 +46,7 @@ class _GuidePageState extends State<GuidePage> {
                 AspectRatio(
                   aspectRatio: 360 / 640, // 모바일 비율
                   child: CachedNetworkImage(
-                    imageUrl: 'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+                    imageUrl: 'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
                     fit: BoxFit.cover,
                     httpHeaders: const {
                       'Accept': 'image/png,image/*,*/*',
