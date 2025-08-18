@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:vvd_ad/utils/typos.dart';
 import '../utils/colors.dart';
+import '../utils/meta_tags.dart';
 
-class GuidePage extends StatelessWidget {
+class GuidePage extends StatefulWidget {
   const GuidePage({Key? key}) : super(key: key);
+
+  @override
+  State<GuidePage> createState() => _GuidePageState();
+}
+
+class _GuidePageState extends State<GuidePage> {
+  @override
+  void initState() {
+    super.initState();
+    // Update meta tags when page loads
+    MetaTags.updateMetaTags(
+      title: '용량 & 나눠맞기 질문 총정리ㅣ삐약 어플',
+      description: '고용량 주사해도 되나요? 나눠맞기 칸수는 어떤 기준으로 세나요?',
+      keywords: '삐약, 용량계산, 나눠맞기, 의료 어플, 약 용량, 의료 커뮤니티, 건강 정보, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤, 세마글루타이드, 티르제파타이드',
+      imageUrl: 'https://ad.vvd-health.com/asset/og_image_guide.png',
+    );
+  }
 
   Future<void> _launchURL() async {
     final Uri url = Uri.parse('https://deeplink.vvd-health.com/');
@@ -21,38 +40,41 @@ class GuidePage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
-                    width: double.infinity,
-                    fit: BoxFit.fitWidth,
-                    loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) return child;
-                      return SizedBox(
-                        height: 600,
-                        child: Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    loadingProgress.expectedTotalBytes!
-                                : null,
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                AspectRatio(
+                  aspectRatio: 360 / 640, // 모바일 비율
+                  child: CachedNetworkImage(
+                    imageUrl: 'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+                    fit: BoxFit.cover,
+                    httpHeaders: const {
+                      'Accept': 'image/png,image/*,*/*',
+                    },
+                    placeholder: (context, url) => Container(
+                      color: Colors.grey[100],
+                      child: const Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                    errorWidget: (context, url, error) {
+                      return Container(
+                        color: Colors.grey[200],
+                        child: const Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.image_not_supported, size: 48, color: Colors.grey),
+                              SizedBox(height: 8),
+                              Text('이미지를 불러올 수 없습니다'),
+                            ],
                           ),
                         ),
                       );
                     },
-                    errorBuilder: (context, error, stackTrace) {
-                      return const SizedBox(
-                        height: 600,
-                        child: Center(
-                          child: Text('이미지를 불러올 수 없습니다'),
-                        ),
-                      );
-                    },
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
           Container(

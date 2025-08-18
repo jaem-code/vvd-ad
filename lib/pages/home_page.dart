@@ -4,8 +4,27 @@ import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/colors.dart';
 import '../utils/typos.dart';
+import '../utils/meta_tags.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    // Reset to default meta tags when returning to home
+    MetaTags.updateMetaTags(
+      title: '국내 1위 다이어트 주사 앱 | 삐약',
+      description: '국내 1위 다이어트 주사 플랫폼. 위고비, 마운자로 등 비만치료제 가격 비교 및 병원 정보 제공',
+      keywords: '삐약, VVD Health, 의료 정보, 건강 관리, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤',
+      imageUrl: 'https://ad.vvd-health.com/favicon.png',
+    );
+  }
   Future<void> _launchURL() async {
     final Uri url = Uri.parse('https://deeplink.vvd-health.com/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {

@@ -302,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755515894816</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary=" 1. 헤더 추가&#10;    - &quot;삐약 가이드&quot; 타이틀&#10;    - &quot;어떤 정보를 찾으시나요?&quot; 메인 텍스트&#10;    - &quot;의료진과 함께하는 정확한 정보&quot; 서브텍스트&#10;  2. Guide 카드&#10;    - OG 이미지 표시 (og_image_guide.png)&#10;    - &quot;인기 콘텐츠&quot; 뱃지 (노란색)&#10;    - 제목: &quot;용량 &amp; 나눠맞기 질문 총정리&quot;&#10;    - 설명: &quot;고용량 주사해도 되나요? 나눠맞기 칸수는 어떤 기준으로 세나요?&quot;&#10;    - 클릭 시 /guide로 이동&#10;  3. Prescription 카드&#10;    - OG 이미지 표시 (og_image_prescription.png)&#10;    - &quot;처방 가이드&quot; 뱃지 (초록색)&#10;    - 제목: &quot;다이어트 주사 처방 가이드&quot;&#10;    - 설명: &quot;어디 병원을 가야되나요? 아무데서나 처방받을 수 있나요?&quot;&#10;    - 클릭 시 /prescription으로 이동">
+      <option name="closed" value="true" />
+      <created>1755516513681</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1755516513681</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
