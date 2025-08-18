@@ -41,17 +41,19 @@ class _GuidePageState extends State<GuidePage> {
       body: Column(
         children: [
           Expanded(
-            child: ListView(
+            child: SingleChildScrollView(
               padding: EdgeInsets.zero,
-              children: [
-                SizedBox(
-                  width: double.infinity,
-                  child: CachedNetworkImage(
-                    imageUrl:
-                        'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(

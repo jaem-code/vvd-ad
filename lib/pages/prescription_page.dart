@@ -41,17 +41,19 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
       body: Column(
         children: [
           Expanded(
-            child: ListView(
+            child: SingleChildScrollView(
               padding: EdgeInsets.zero,
-              children: [
-                SizedBox(
-                  width: double.infinity,
-                  child: CachedNetworkImage(
-                    imageUrl:
-                        'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(
