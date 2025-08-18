@@ -37,56 +37,54 @@ class _GuidePageState extends State<GuidePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.zero,
-              child: Column(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+          SafeArea(
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Container(
+                    color: Colors.white,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: double.infinity,
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
+                          ),
+                        ),
+                        SizedBox(height: 100), // 버튼 공간 확보
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  offset: Offset(0, -2),
-                  blurRadius: 4,
                 ),
               ],
             ),
-            child: Center(
-              child: SizedBox(
-                width: 328,
-                height: 64,
-                child: ElevatedButton(
-                  onPressed: _launchURL,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: YELLOW_600,
-                    foregroundColor: BLUE_50,
-                    padding: const EdgeInsets.symmetric(vertical: 18),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    elevation: 4,
+          ),
+          // 플로팅 버튼을 Stack으로 구현
+          Positioned(
+            left: 16,
+            right: 16,
+            bottom: 24,
+            child: SizedBox(
+              width: 328,
+              height: 60,
+              child: ElevatedButton(
+                onPressed: _launchURL,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: YELLOW_600,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(
-                    '커뮤니티 인기글 더보기',
-                    style: T1_Bold.copyWith(color: BLUE_50),
+                  elevation: 4,
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                ),
+                child: Text(
+                  '커뮤니티 인기글 더보기',
+                  style: T1_Bold.copyWith(
+                    color: BLUE_50,
                   ),
                 ),
               ),
