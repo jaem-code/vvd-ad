@@ -1,1 +1,7 @@
+# 각 경로별 정적 HTML 파일로 리디렉션 (오픈그래프용)
+/guide          /guide.html         200
+/prescription   /prescription.html  200
+/a              /a.html            200
+
+# 나머지 모든 경로는 Flutter 앱으로
 /*    /index.html   200

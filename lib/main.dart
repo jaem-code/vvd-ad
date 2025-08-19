@@ -11,9 +11,9 @@ import 'pages/prescription_page.dart';
 import 'utils/typos.dart';
 
 void main() {
-  // if (kIsWeb) {
-  //   usePathUrlStrategy();
-  // }
+  if (kIsWeb) {
+    usePathUrlStrategy();
+  }
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setSystemUIOverlayStyle(

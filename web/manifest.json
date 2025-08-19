@@ -1,11 +1,11 @@
 {
-    "name": "vvd_ad",
-    "short_name": "vvd_ad",
+    "name": "삐약 - 국내 1위 다이어트 주사 관리&커뮤니티",
+    "short_name": "삐약",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "vvd_ad_page",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFD600",
+    "description": "시작부터 유지까지 함께하는 비만 약 관리. 위고비, 마운자로 등 GLP-1 다이어트 주사 정보와 병원/약국 찾기",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

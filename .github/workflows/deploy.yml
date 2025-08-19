@@ -28,6 +28,9 @@ jobs:
         run: |
           cp web/404.html build/web/404.html
           cp web/_redirects build/web/_redirects
+          cp web/guide.html build/web/guide.html
+          cp web/prescription.html build/web/prescription.html
+          cp web/a.html build/web/a.html
 
       - name: Check AWS Identity
         run: aws sts get-caller-identity
