@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
 
               // Guide Card
               GestureDetector(
-                onTap: () => context.go('/prescription'),
+                onTap: () => context.go('/guide'),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
 
               // Prescription Card
               GestureDetector(
-                onTap: () => context.go('/guide'),
+                onTap: () => context.go('/prescription'),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
