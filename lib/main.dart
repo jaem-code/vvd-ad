@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:vvd_ad/pages/only_one_page.dart';
 import 'pages/home_page.dart';
 import 'pages/product_a_page.dart';
 import 'pages/guide_page.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(path: '/', builder: (context, state) => HomePage()),
       GoRoute(path: '/a', builder: (context, state) => ProductAPage()),
+      GoRoute(path: '/onlyone', builder: (context, state) => OnlyOnePage()),
       GoRoute(path: '/guide', builder: (context, state) => GuidePage()),
       GoRoute(
           path: '/prescription',
