@@ -44,13 +44,14 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
                   child: Container(
                     color: Colors.white,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment
+                          .start, // https://images.vvd-health.com/back-office/admin/banner/e0d2231e-e990-4213-86ed-8292d3a10b75-7e987140-2cd2-41b7-91dc-fecf962c8824.png
                       children: [
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/e0d2231e-e990-4213-86ed-8292d3a10b75-7e987140-2cd2-41b7-91dc-fecf962c8824.png'),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
                       ],
