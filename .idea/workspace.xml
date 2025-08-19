@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="-">
-      <change beforePath="$PROJECT_DIR$/lib/pages/guide_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/guide_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/prescription_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/prescription_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -443,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755572142271</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="-">
+      <option name="closed" value="true" />
+      <created>1755572284285</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1755572284285</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
