@@ -43,26 +43,11 @@
   <link rel="canonical" href="https://ad.vvd-health.com/prescription">
   <meta name="robots" content="index, follow">
   
-  <!-- Redirect to Flutter app after meta tags are read -->
-  <script>
-    // Delay to ensure crawlers read meta tags
-    setTimeout(function() {
-      // Only redirect for regular browsers, not crawlers
-      if (!navigator.userAgent.match(/bot|crawler|spider|crawling/i)) {
-        window.location.href = '/#/prescription';
-      }
-    }, 100);
-  </script>
-  
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 <body>
-  <!-- Content for crawlers -->
-  <h1>다이어트 주사 처방 가이드</h1>
-  <p>어디 병원을 가야되나요? 아무데서나 처방받을 수 있나요? 삐약 어플에서 병원과 약국 정보를 확인하세요.</p>
-  
-  <!-- Flutter app loads here for regular users -->
-  <script src="main.dart.js" type="application/javascript"></script>
+  <!-- Flutter app loads directly -->
+  <script src="/flutter_bootstrap.js" async></script>
 </body>
 </html>
