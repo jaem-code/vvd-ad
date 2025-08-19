@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:vvd_ad/utils/typos.dart';
+
 import '../utils/colors.dart';
 import '../utils/meta_tags.dart';
 
@@ -21,7 +21,8 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
       description: '어디 병원을 가야되나요? 아무데서나 처방받을 수 있나요?',
       keywords:
           '다이어트 주사, 다이어트 주사 처방, 다이어트 주사 병원, 다이어트 주사 약국, 위고비 처방, 마운자로 처방, 삭센다 처방, GLP-1 처방, 비만 치료 병원, 비만 클리닉, 다이어트 병원, 삐약, 위고비 병원 추천, 마운자로 병원 추천, 비만약 처방',
-      imageUrl: 'https://ad.vvd-health.com/asset/og_image_prescription.png',
+      imageUrl:
+          'https://images.vvd-health.com/back-office/admin/banner/8c2af972-8d75-4950-8a65-24d2ee5686fb-ad66a17c-9689-4501-9201-07dd41a54d68.png',
     );
   }
 

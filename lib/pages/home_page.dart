@@ -1,10 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../utils/colors.dart';
-import '../utils/typos.dart';
 import '../utils/meta_tags.dart';
+import '../utils/typos.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -90,21 +91,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: AspectRatio(
                           aspectRatio: 1200 / 630, // OG image ratio
-                          child: Image.asset(
-                            'lib/assets/og_image_guide.png',
-                            fit: BoxFit.cover,
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                color: GREY_500,
-                                child: Center(
-                                  child: Icon(
-                                    Icons.article_outlined,
-                                    size: 48,
-                                    color: BLUE_600,
-                                  ),
-                                ),
-                              );
-                            },
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: CachedNetworkImage(
+                                imageUrl:
+                                    'https://images.vvd-health.com/back-office/admin/banner/9c1d4fb9-d6a7-436c-a5c9-1b048163ec04-4cbad6f0-afe3-4f3f-9a64-5b9c5296eac8.png'),
                           ),
                         ),
                       ),
@@ -119,12 +110,14 @@ class _HomePageState extends State<HomePage> {
                                 vertical: 4,
                               ),
                               decoration: BoxDecoration(
-                                color: YELLOW_100,
+                                color: BLUE_200,
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
                                 '인기 콘텐츠',
-                                style: B4_Medium.copyWith(color: YELLOW_600),
+                                style: B4_Semibold.copyWith(
+                                    color:
+                                        const Color.fromRGBO(10, 120, 182, 1)),
                               ),
                             ),
                             const SizedBox(height: 12),
@@ -138,21 +131,6 @@ class _HomePageState extends State<HomePage> {
                               style: B2_Regular.copyWith(color: GREY_600),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                            ),
-                            const SizedBox(height: 16),
-                            Row(
-                              children: [
-                                Text(
-                                  '자세히 보기',
-                                  style: B2_Medium.copyWith(color: BLUE_600),
-                                ),
-                                const SizedBox(width: 4),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  size: 14,
-                                  color: BLUE_600,
-                                ),
-                              ],
                             ),
                           ],
                         ),
@@ -189,21 +167,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: AspectRatio(
                           aspectRatio: 1200 / 630, // OG image ratio
-                          child: Image.asset(
-                            'lib/assets/og_image_prescription.png',
-                            fit: BoxFit.cover,
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                color: GREEN_50,
-                                child: Center(
-                                  child: Icon(
-                                    Icons.medical_services_outlined,
-                                    size: 48,
-                                    color: GREEN_500,
-                                  ),
-                                ),
-                              );
-                            },
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: CachedNetworkImage(
+                                imageUrl:
+                                    'https://images.vvd-health.com/back-office/admin/banner/8c2af972-8d75-4950-8a65-24d2ee5686fb-ad66a17c-9689-4501-9201-07dd41a54d68.png'),
                           ),
                         ),
                       ),
@@ -218,12 +186,14 @@ class _HomePageState extends State<HomePage> {
                                 vertical: 4,
                               ),
                               decoration: BoxDecoration(
-                                color: GREEN_50,
+                                color: BLUE_200,
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
                                 '처방 가이드',
-                                style: B4_Medium.copyWith(color: GREEN_500),
+                                style: B4_Semibold.copyWith(
+                                    color:
+                                        const Color.fromRGBO(10, 120, 182, 1)),
                               ),
                             ),
                             const SizedBox(height: 12),
@@ -238,20 +208,81 @@ class _HomePageState extends State<HomePage> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            const SizedBox(height: 16),
-                            Row(
-                              children: [
-                                Text(
-                                  '자세히 보기',
-                                  style: B2_Medium.copyWith(color: BLUE_600),
-                                ),
-                                const SizedBox(width: 4),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  size: 14,
-                                  color: BLUE_600,
-                                ),
-                              ],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Prescription Card
+              GestureDetector(
+                onTap: () => context.go('/efficacy'),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.08),
+                        blurRadius: 10,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                        child: AspectRatio(
+                          aspectRatio: 1200 / 630, // OG image ratio
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: CachedNetworkImage(
+                                imageUrl:
+                                    'https://images.vvd-health.com/back-office/admin/banner/19865a92-49bd-480b-b924-87a1407634b0-9e23ac45-68eb-4c77-b8c2-970d0ede488f.png'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: BLUE_200,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Text(
+                                '다빈도 질문 TOP6',
+                                style: B4_Semibold.copyWith(
+                                    color:
+                                        const Color.fromRGBO(10, 120, 182, 1)),
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              '주사 효과 질문 총정리',
+                              style: T1_Semibold.copyWith(color: GREY_900),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              '효과 없는데 용량 올려도 되나요? 반감기 지나면 약 효과 없는건가요?',
+                              style: B2_Regular.copyWith(color: GREY_600),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),

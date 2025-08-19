@@ -6,23 +6,23 @@ import 'package:vvd_ad/utils/typos.dart';
 import '../utils/colors.dart';
 import '../utils/meta_tags.dart';
 
-class GuidePage extends StatefulWidget {
+class EfficacyPage extends StatefulWidget {
   @override
-  State<GuidePage> createState() => _GuidePageState();
+  State<EfficacyPage> createState() => _EfficacyPageState();
 }
 
-class _GuidePageState extends State<GuidePage> {
+class _EfficacyPageState extends State<EfficacyPage> {
   @override
   void initState() {
     super.initState();
     // Update meta tags when page loads
     MetaTags.updateMetaTags(
-      title: '용량 & 나눠맞기 질문 총정리ㅣ삐약 어플',
-      description: '고용량 주사해도 되나요? 나눠맞기 칸수는 어떤 기준으로 세나요?',
+      title: '주사 효과 질문 총정리ㅣ삐약 어플',
+      description: '효과 없는데 용량 올려도 되나요? 반감기 지나면 약 효과 없는건가요?',
       keywords:
           '삐약, 용량계산, 나눠맞기, 의료 어플, 약 용량, 의료 커뮤니티, 건강 정보, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤, 세마글루타이드, 티르제파타이드',
       imageUrl:
-          'https://images.vvd-health.com/back-office/admin/banner/9c1d4fb9-d6a7-436c-a5c9-1b048163ec04-4cbad6f0-afe3-4f3f-9a64-5b9c5296eac8.png',
+          'https://images.vvd-health.com/back-office/admin/banner/19865a92-49bd-480b-b924-87a1407634b0-9e23ac45-68eb-4c77-b8c2-970d0ede488f.png',
     );
   }
 
@@ -51,25 +51,25 @@ class _GuidePageState extends State<GuidePage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/d86e65e4-c798-4b2d-a1ad-e8fdf1169219-6ff69adc-e501-41aa-bc59-0c87ed37db92.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/3a56b2f7-dd36-4a09-8f1c-7f4cb9e0e1dd-2ad1e3c0-04f3-46de-8764-267c40a90477.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/5ee94781-8e4a-4ac2-8228-d61c1c5cb983-091595d8-aa9f-45ce-88af-2175c3149c21.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/c06b813e-54de-4dbb-a897-469953999d8d-0ace419b-7f74-4736-ba48-1e1998b5a096.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/10447503-ef44-441b-9dca-f414ee67d192-4f1f59f9-fed0-4b87-bdb7-5e969c14ecd2.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/53f70718-0f9e-4976-8b2c-70137cc675c3-267a156f-0952-4e38-97fe-6a1c5df88066.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/a28ff319-900f-462e-991b-7e9bcaadc7de-4eb487ab-8592-46ac-9472-11190be51e8c.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/ae827f55-5476-49e9-b1fd-468ca6904779-a4060388-e87a-4695-b3ce-79edad1cc3bb.png'),
                         ),
 
                         SizedBox(height: 100), // 버튼 공간 확보
@@ -99,7 +99,7 @@ class _GuidePageState extends State<GuidePage> {
                   padding: EdgeInsets.symmetric(vertical: 16),
                 ),
                 child: Text(
-                  '다이어트 주사 병원,약국 찾기',
+                  '커뮤니티 인기글 더보기',
                   style: T1_Bold.copyWith(
                     color: BLUE_50,
                   ),

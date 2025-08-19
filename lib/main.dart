@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:vvd_ad/pages/efficacy_page.dart';
 import 'pages/home_page.dart';
 import 'pages/product_a_page.dart';
 import 'pages/guide_page.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
       GoRoute(
           path: '/prescription',
           builder: (context, state) => PrescriptionPage()),
+      GoRoute(path: '/efficacy', builder: (context, state) => EfficacyPage()),
     ],
   );
 
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         final app = MaterialApp.router(
-          title: '삐약 | 국내 1위 다이어트 주사 관리&커뮤니티, 병원/약국 찾기',
+          title: '삐약 어플 | 국내 1위 다이어트 주사 관리&커뮤니티, 병원/약국 찾기',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             // Pretendard 폰트를 기본으로 설정
@@ -177,7 +179,7 @@ class MyApp extends StatelessWidget {
         if (kIsWeb) {
           return Center(
             child: Container(
-              width: 360.w,
+              width: 360,
               constraints: BoxConstraints(
                 minHeight: MediaQuery.of(context).size.height,
               ),

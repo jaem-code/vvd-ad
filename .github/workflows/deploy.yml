@@ -31,6 +31,7 @@ jobs:
           mkdir -p build/web/guide && cp web/guide.html build/web/guide/index.html
           mkdir -p build/web/prescription && cp web/prescription.html build/web/prescription/index.html
           mkdir -p build/web/a && cp web/a.html build/web/a/index.html
+          mkdir -p build/web/efficacy && cp web/efficacy.html build/web/efficacy/index.html
 
       - name: Check AWS Identity
         run: aws sts get-caller-identity
