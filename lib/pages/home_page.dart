@@ -45,8 +45,8 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: YELLOW_500,
         elevation: 0,
         title: Text(
-          '삐약 어플 ㅣ 국내 1위 다이어트 주사 관리 & 커뮤니티, 병원/약국찾기',
-          style: H5_Semibold.copyWith(color: GREY_900),
+          '삐약 어플ㅣ국내 1위 다이어트 주사 관리 & 커뮤니티, 병원/약국찾기',
+          style: Bt3_Bold.copyWith(color: GREY_900),
         ),
         centerTitle: true,
       ),

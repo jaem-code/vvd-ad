@@ -99,7 +99,7 @@ class _GuidePageState extends State<GuidePage> {
                   padding: EdgeInsets.symmetric(vertical: 16),
                 ),
                 child: Text(
-                  '다이어트 주사 병원,약국 찾기',
+                  '커뮤니티 인기글 더보기',
                   style: T1_Bold.copyWith(
                     color: BLUE_50,
                   ),
