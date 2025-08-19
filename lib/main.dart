@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         final app = MaterialApp.router(
-          title: 'VVD Ad',
+          title: '삐약 | 국내 1위 다이어트 주사 관리&커뮤니티, 병원/약국 찾기',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             // Pretendard 폰트를 기본으로 설정
