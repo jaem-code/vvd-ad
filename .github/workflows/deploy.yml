@@ -22,7 +22,7 @@ jobs:
         run: flutter pub get
 
       - name: Build web application
-        run: flutter build web --release --web-renderer html
+        run: flutter build web --release
 
       - name: Copy routing files
         run: |
