@@ -20,11 +20,13 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     // Reset to default meta tags when returning to home
     MetaTags.updateMetaTags(
-      title: '국내 1위 다이어트 주사 앱 | 삐약',
-      description: '국내 1위 다이어트 주사 플랫폼. 위고비, 마운자로 등 비만치료제 가격 비교 및 병원 정보 제공',
+      title: '삐약 어플 ㅣ 국내 1위 다이어트 주사 관리 & 커뮤니티, 병원/약국찾기',
+      description:
+          '시작부터 유지까지 함께하는 비만 약 관리. 위고비, 마운자로 등 GLP-1 다이어트 주사 정보와 병원/약국 찾기',
       keywords:
           '삐약, VVD Health, 의료 정보, 건강 관리, 위고비, 마운자로, 비만치료제, 위고비 가격, 마운자로 가격, GLP-1 주사, 위고비 병원, 마운자로 병원, 위고비 갤',
-      imageUrl: 'https://ad.vvd-health.com/favicon.png',
+      imageUrl:
+          'https://images.vvd-health.com/back-office/admin/banner/c464298e-a9fb-4695-a7df-2f3ee9fa096d-ea59eb03-b8fa-4e87-abe8-0954699ff510.png',
     );
   }
 
@@ -43,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: YELLOW_500,
         elevation: 0,
         title: Text(
-          '국내 1위 다이어트 주사 앱 | 삐약 ',
+          '삐약 어플 ㅣ 국내 1위 다이어트 주사 관리 & 커뮤니티, 병원/약국찾기',
           style: H5_Semibold.copyWith(color: GREY_900),
         ),
         centerTitle: true,
@@ -61,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 8),
               Text(
-                '삐약이와 함께하는 비만 및 다이어트 정복',
+                '시작부터 유지까지 삐약이와 함께하는 비만 및 다이어트 정복',
                 style: B1_Regular.copyWith(color: GREY_600),
               ),
               const SizedBox(height: 24),
