@@ -53,6 +53,23 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
                           child: CachedNetworkImage(
                             imageUrl:
                                 'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/807830c4-92a5-4d8c-8433-f897b6eee2f1-56c81c5a-f69a-4022-82fe-5123f2051b80.png',
+                            fit: BoxFit.fitWidth,
+                            placeholder: (context, url) => Container(
+                              color: Colors.grey[200],
+                              child: const Center(
+                                child: CircularProgressIndicator(),
+                              ),
+                            ),
+                            errorWidget: (context, url, error) => Container(
+                              color: Colors.grey[200],
+                              child: const Center(
+                                child: Icon(Icons.error),
+                              ),
+                            ),
+                            memCacheWidth: 1080,
+                            maxWidthDiskCache: 1080,
+                            fadeInDuration: const Duration(milliseconds: 300),
+                            fadeOutDuration: const Duration(milliseconds: 300),
                           ),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
