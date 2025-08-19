@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:vvd_ad/utils/typos.dart';
+
 import '../utils/colors.dart';
 import '../utils/meta_tags.dart';
-import 'package:flutter/foundation.dart';
 
 class GuidePage extends StatefulWidget {
   @override
@@ -51,7 +50,7 @@ class _GuidePageState extends State<GuidePage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png'),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
                       ],
