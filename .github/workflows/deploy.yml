@@ -27,8 +27,7 @@ jobs:
       - name: Copy routing files
         run: |
           cp web/404.html build/web/404.html
-          cp web/_redirects build/web/_redirects
-          # 각 경로에 대한 폴더 생성 및 index.html 복사
+          # 각 경로에 대한 폴더 생성 및 index.html 복사 (중복 파일 제거)
           mkdir -p build/web/guide && cp web/guide.html build/web/guide/index.html
           mkdir -p build/web/prescription && cp web/prescription.html build/web/prescription/index.html
           mkdir -p build/web/a && cp web/a.html build/web/a/index.html

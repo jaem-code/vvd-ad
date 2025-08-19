@@ -80,14 +80,6 @@
       <option name="presentableId" value="Default" />
       <updated>1750987137873</updated>
     </task>
-    <task id="LOCAL-00001" summary="- vvd-ad">
-      <option name="closed" value="true" />
-      <created>1750989772625</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1750989772625</updated>
-    </task>
     <task id="LOCAL-00002" summary="- vvd-ad">
       <option name="closed" value="true" />
       <created>1750990106742</created>
@@ -472,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755577805127</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="-">
+      <option name="closed" value="true" />
+      <created>1755578541179</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1755578541180</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
