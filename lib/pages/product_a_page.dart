@@ -196,7 +196,7 @@ class _ProductAPageState extends State<ProductAPage> {
           Positioned(
             left: 16,
             right: 16,
-            bottom: 24,
+            bottom: 8,
             child: SizedBox(
               width: 328,
               height: 60,

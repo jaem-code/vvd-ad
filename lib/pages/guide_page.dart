@@ -50,7 +50,13 @@ class _GuidePageState extends State<GuidePage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/8f8aacd4-9e98-42ea-8680-fb01770848a4-ee95faea-b60b-49d0-a8a2-4929e4d7f226.png'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://images.vvd-health.com/back-office/admin/banner/15409fe7-c5e2-4211-a13f-b396ecc5db51-75247739-5cfb-48bf-8fc4-6f997e3b1e2c.png'),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
                       ],
@@ -64,7 +70,7 @@ class _GuidePageState extends State<GuidePage> {
           Positioned(
             left: 16,
             right: 16,
-            bottom: 24,
+            bottom: 8,
             child: SizedBox(
               width: 328,
               height: 60,
