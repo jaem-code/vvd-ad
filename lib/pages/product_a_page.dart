@@ -10,9 +10,6 @@ import '../widgets/expandable_faq_widget.dart';
 import 'dart:html' as html;
 
 class ProductAPage extends StatefulWidget {
-  static const String topBannerImageUrl =
-      'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/f4c8cd87-1358-4337-801a-72ab3e3d7ba9-8b034ec2-9e44-4691-bf9f-d5d932e543fb.png';
-
   static const bool showLogoOverlay = true;
 
   @override
@@ -68,7 +65,8 @@ class _ProductAPageState extends State<ProductAPage> {
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
-                              imageUrl: ProductAPage.topBannerImageUrl),
+                              imageUrl:
+                                  'https://images.vvd-health.com/back-office/admin/banner/f4c8cd87-1358-4337-801a-72ab3e3d7ba9-8b034ec2-9e44-4691-bf9f-d5d932e543fb.png'),
                         ),
                         SizedBox(
                           width: double.infinity,

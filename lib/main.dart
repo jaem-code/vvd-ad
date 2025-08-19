@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(path: '/', builder: (context, state) => HomePage()),
       GoRoute(path: '/a', builder: (context, state) => ProductAPage()),
-      GoRoute(path: '/guide', builder: (context, state) => const GuidePage()),
+      GoRoute(path: '/guide', builder: (context, state) => GuidePage()),
       GoRoute(
           path: '/prescription',
-          builder: (context, state) => const PrescriptionPage()),
+          builder: (context, state) => PrescriptionPage()),
     ],
   );
 

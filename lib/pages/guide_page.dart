@@ -5,10 +5,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:vvd_ad/utils/typos.dart';
 import '../utils/colors.dart';
 import '../utils/meta_tags.dart';
+import 'package:flutter/foundation.dart';
 
 class GuidePage extends StatefulWidget {
-  const GuidePage({Key? key}) : super(key: key);
-
   @override
   State<GuidePage> createState() => _GuidePageState();
 }
@@ -51,26 +50,8 @@ class _GuidePageState extends State<GuidePage> {
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
-                            imageUrl:
-                                'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png',
-                            fit: BoxFit.fitWidth,
-                            placeholder: (context, url) => Container(
-                              color: Colors.grey[200],
-                              child: const Center(
-                                child: CircularProgressIndicator(),
-                              ),
-                            ),
-                            errorWidget: (context, url, error) => Container(
-                              color: Colors.grey[200],
-                              child: const Center(
-                                child: Icon(Icons.error),
-                              ),
-                            ),
-                            memCacheWidth: 1080,
-                            maxWidthDiskCache: 1080,
-                            fadeInDuration: const Duration(milliseconds: 300),
-                            fadeOutDuration: const Duration(milliseconds: 300),
-                          ),
+                              imageUrl:
+                                  'https://vivid-bucket-real.s3.ap-northeast-2.amazonaws.com/back-office/admin/banner/33796856-4b79-4785-94f5-f9813446084c-2fbe405d-0f6a-4215-aade-bbe9da113b79.png'),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
                       ],
