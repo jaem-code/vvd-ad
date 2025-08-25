@@ -51,6 +51,12 @@ class _PricePageState extends State<PricePage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
+                                  'https://images.vvd-health.com/back-office/admin/banner/2fbb4c97-9605-45d0-b2de-7d984814b80a-b72b417f-3a5f-4cf9-8a87-e311ae81b8bc.png'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CachedNetworkImage(
+                              imageUrl:
                                   'https://images.vvd-health.com/back-office/admin/banner/4f9ab019-4b4f-44ee-a299-b3390ca33fa8-d5a49f82-59c5-423b-90ec-6ed998072cf4.png'),
                         ),
                         SizedBox(
