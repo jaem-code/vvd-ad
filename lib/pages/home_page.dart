@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
-                                '주사 가격 지도',
+                                '전국 주사 가격 지도',
                                 style: B4_Semibold.copyWith(
                                     color:
                                         const Color.fromRGBO(10, 120, 182, 1)),
