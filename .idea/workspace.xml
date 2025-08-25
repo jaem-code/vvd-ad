@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="-">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="- favicon.png -&gt; favicon.ico">
+      <change afterPath="$PROJECT_DIR$/lib/pages/price_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/price.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/a.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/efficacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/efficacy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/guide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/prescription.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vvd/StudioProjects/vvd_ad/web&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/vvd/StudioProjects/vvd_ad/web",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
@@ -88,14 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750987137873</updated>
-    </task>
-    <task id="LOCAL-00008" summary="- vvd-ad">
-      <option name="closed" value="true" />
-      <created>1751088447559</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1751088447559</updated>
     </task>
     <task id="LOCAL-00009" summary="- vvd-ad">
       <option name="closed" value="true" />
@@ -481,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755585706383</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="- favicon.png -&gt; favicon.ico">
+      <option name="closed" value="true" />
+      <created>1755850337347</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1755850337347</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -491,6 +489,7 @@
     <MESSAGE value="- vvd-ad&#10;&#10;- 단 한가지 의원 추가&#10;- GA4 추가&#10;- 애플 웹뷰 최적화" />
     <MESSAGE value=" 1. 헤더 추가&#10;    - &quot;삐약 가이드&quot; 타이틀&#10;    - &quot;어떤 정보를 찾으시나요?&quot; 메인 텍스트&#10;    - &quot;의료진과 함께하는 정확한 정보&quot; 서브텍스트&#10;  2. Guide 카드&#10;    - OG 이미지 표시 (og_image_guide.png)&#10;    - &quot;인기 콘텐츠&quot; 뱃지 (노란색)&#10;    - 제목: &quot;용량 &amp; 나눠맞기 질문 총정리&quot;&#10;    - 설명: &quot;고용량 주사해도 되나요? 나눠맞기 칸수는 어떤 기준으로 세나요?&quot;&#10;    - 클릭 시 /guide로 이동&#10;  3. Prescription 카드&#10;    - OG 이미지 표시 (og_image_prescription.png)&#10;    - &quot;처방 가이드&quot; 뱃지 (초록색)&#10;    - 제목: &quot;다이어트 주사 처방 가이드&quot;&#10;    - 설명: &quot;어디 병원을 가야되나요? 아무데서나 처방받을 수 있나요?&quot;&#10;    - 클릭 시 /prescription으로 이동" />
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="- favicon.png -&gt; favicon.ico" />
+    <option name="LAST_COMMIT_MESSAGE" value="- favicon.png -&gt; favicon.ico" />
   </component>
 </project>

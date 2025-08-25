@@ -70,6 +70,82 @@ class _HomePageState extends State<HomePage> {
 
               // Guide Card
               GestureDetector(
+                onTap: () => context.go('/price'),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.08),
+                        blurRadius: 10,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                        child: AspectRatio(
+                          aspectRatio: 1200 / 630, // OG image ratio
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: CachedNetworkImage(
+                                imageUrl:
+                                    'https://images.vvd-health.com/back-office/admin/banner/80d11cb2-ee5c-412b-b810-22e387f926dd-ddaba05f-a2e7-40a2-9d18-37a5b39ca240.png'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: BLUE_200,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Text(
+                                '주사 가격 지도',
+                                style: B4_Semibold.copyWith(
+                                    color:
+                                        const Color.fromRGBO(10, 120, 182, 1)),
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              '다이어트 주사 평균 가격',
+                              style: T1_Semibold.copyWith(color: GREY_900),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              '전국 평균 가격, 병원 약국 정보를 지도를 통해 알아 볼까요?',
+                              style: B2_Regular.copyWith(color: GREY_600),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Guide Card
+              GestureDetector(
                 onTap: () => context.go('/guide'),
                 child: Container(
                   decoration: BoxDecoration(
