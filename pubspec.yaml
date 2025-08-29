@@ -1,11 +1,10 @@
 name: vvd_ad
-description: "vvd_ad_page"
+description: "삐약 어플 ㅣ 국내 1위 다이어트 주사 관리 & 커뮤니티, 병원/약국찾기"
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 version: 1.0.0+1
 
-environment:
+enviㅇronment:
   sdk: '>=3.0.0 <4.0.0'
   flutter: ">=3.0.0"
 
