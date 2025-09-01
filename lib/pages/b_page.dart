@@ -111,10 +111,10 @@ class _BPageState extends State<BPage> {
                             width: double.infinity,
                             child: CachedNetworkImage(
                                 imageUrl:
-                                    'https://images.vvd-health.com/back-office/admin/banner/6a6f7249-6022-47da-9c24-271f7aeefe88-69c77dc1-e0ca-4d13-9ec5-b53f23767210.png'),
+                                    'https://images.vvd-health.com/back-office/admin/banner/f22484db-c2be-49ee-8aaf-07962da31166-742bb6f9-0b9a-456f-99a3-dcb3ab073842.png'),
                           ),
                         ),
-                        SizedBox(height: 100),
+                        SizedBox(height: 40),
                       ],
                     ),
                   ),
