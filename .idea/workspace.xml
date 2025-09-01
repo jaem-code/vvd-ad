@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="- price page">
-      <change afterPath="$PROJECT_DIR$/lib/pages/b_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="- b page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/b_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/b_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,14 +82,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750987137873</updated>
-    </task>
-    <task id="LOCAL-00014" summary="- vvd-ad&#10;&#10;- 단 한가지 의원 추가&#10;- 파이어베이스 추가">
-      <option name="closed" value="true" />
-      <created>1751357076190</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1751357076190</updated>
     </task>
     <task id="LOCAL-00015" summary="- vvd-ad&#10;&#10;- 단 한가지 의원 추가&#10;- 파이어베이스 추가">
       <option name="closed" value="true" />
@@ -479,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756435048863</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="- b page">
+      <option name="closed" value="true" />
+      <created>1756716554339</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1756716554340</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -491,6 +487,7 @@
     <MESSAGE value="-" />
     <MESSAGE value="- favicon.png -&gt; favicon.ico" />
     <MESSAGE value="- price page" />
-    <option name="LAST_COMMIT_MESSAGE" value="- price page" />
+    <MESSAGE value="- b page" />
+    <option name="LAST_COMMIT_MESSAGE" value="- b page" />
   </component>
 </project>
