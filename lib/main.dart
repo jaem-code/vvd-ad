@@ -7,6 +7,7 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:vvd_ad/pages/b_page.dart';
 import 'package:vvd_ad/pages/efficacy_page.dart';
 import 'package:vvd_ad/pages/price_page.dart';
+import 'pages/handok_page.dart';
 import 'pages/home_page.dart';
 import 'pages/product_a_page.dart';
 import 'pages/guide_page.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
           path: '/prescription',
           builder: (context, state) => PrescriptionPage()),
       GoRoute(path: '/efficacy', builder: (context, state) => EfficacyPage()),
+      GoRoute(path: '/handok', builder: (context, state) => HandokPage()),
     ],
   );
 
