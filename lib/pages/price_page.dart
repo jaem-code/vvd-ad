@@ -57,19 +57,19 @@ class _PricePageState extends State<PricePage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/e88d8217-fb93-4bb3-ac0d-56a4d70a03e1-a530962a-f777-4c01-afdc-b67061b3212d.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/c686e278-18b6-4baf-95a7-2f68c0105bc3-d3c93474-3526-4902-a810-4e0774d82ec5.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/e54b6339-34e3-40be-87e3-9c58dede7b93-e4fe04da-bc0c-4266-ae55-c11a19894b1c.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/3946e8b5-4378-42f3-868b-5cc517816ed1-f74f709b-134e-4ba1-b494-d4aec19c9254.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/1b3a8485-de34-4be9-8d21-936082834328-8f509d5e-16ec-4df6-a77c-342fbd132197.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/8dbbfa15-4026-45ed-b014-1248dd42623b-0e51e957-f493-4318-a170-4fc179407cc4.png'),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
                       ],
