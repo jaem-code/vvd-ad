@@ -47,6 +47,7 @@ class _TestPageState extends State<TestPage> {
                             child: Text('홈으로 가기'),
                           ),
                         ),
+                        SizedBox(height: 40),
                         InkWell(
                           onTap: () {
                             _launchURL('vivid://record');
@@ -56,6 +57,7 @@ class _TestPageState extends State<TestPage> {
                             child: Text('관리생활로 가기'),
                           ),
                         ),
+                        SizedBox(height: 40),
                         InkWell(
                           onTap: () {
                             _launchURL('vivid://review');
@@ -65,6 +67,7 @@ class _TestPageState extends State<TestPage> {
                             child: Text('약후기로 가기'),
                           ),
                         ),
+                        SizedBox(height: 40),
                         InkWell(
                           onTap: () {
                             _launchURL('vivid://community');
@@ -74,6 +77,7 @@ class _TestPageState extends State<TestPage> {
                             child: Text('커뮤니티로 가기'),
                           ),
                         ),
+                        SizedBox(height: 40),
                         InkWell(
                           onTap: () {
                             _launchURL('vivid://blog');
@@ -81,6 +85,27 @@ class _TestPageState extends State<TestPage> {
                           child: SizedBox(
                             width: 240,
                             child: Text('블로그로 가기'),
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        InkWell(
+                          onTap: () {
+                            _launchURL('vivid://myinfo');
+                          },
+                          child: SizedBox(
+                            width: 240,
+                            child: Text('내정보로 가기'),
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        InkWell(
+                          onTap: () {
+                            _launchURL(
+                                'https://www.youtube.com/watch?v=S2XdG1Uael8');
+                          },
+                          child: SizedBox(
+                            width: 240,
+                            child: Text('유튜브로 가기'),
                           ),
                         ),
                         SizedBox(height: 100), // 버튼 공간 확보
