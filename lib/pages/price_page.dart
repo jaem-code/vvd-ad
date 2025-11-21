@@ -80,32 +80,32 @@ class _PricePageState extends State<PricePage> {
             ),
           ),
           // 플로팅 버튼을 Stack으로 구현
-          Positioned(
-            left: 16,
-            right: 16,
-            bottom: 12,
-            child: SizedBox(
-              width: 328,
-              height: 60,
-              child: ElevatedButton(
-                onPressed: _launchURL,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: YELLOW_600,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  elevation: 4,
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                ),
-                child: Text(
-                  '다이어트 주사 병원,약국 찾기',
-                  style: T1_Bold.copyWith(
-                    color: BLUE_50,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   left: 16,
+          //   right: 16,
+          //   bottom: 12,
+          //   child: SizedBox(
+          //     width: 328,
+          //     height: 60,
+          //     child: ElevatedButton(
+          //       onPressed: _launchURL,
+          //       style: ElevatedButton.styleFrom(
+          //         backgroundColor: YELLOW_600,
+          //         shape: RoundedRectangleBorder(
+          //           borderRadius: BorderRadius.circular(8),
+          //         ),
+          //         elevation: 4,
+          //         padding: EdgeInsets.symmetric(vertical: 16),
+          //       ),
+          //       child: Text(
+          //         '다이어트 주사 병원,약국 찾기',
+          //         style: T1_Bold.copyWith(
+          //           color: BLUE_50,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
