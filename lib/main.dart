@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:vvd_ad/pages/b_page.dart';
+import 'package:vvd_ad/pages/bible_page.dart';
 import 'package:vvd_ad/pages/efficacy_page.dart';
 import 'package:vvd_ad/pages/price_page.dart';
 import 'package:vvd_ad/pages/test_page.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
       GoRoute(path: '/a', builder: (context, state) => ProductAPage()),
       GoRoute(path: '/b', builder: (context, state) => BPage()),
       GoRoute(path: '/guide', builder: (context, state) => GuidePage()),
+      GoRoute(path: '/bible', builder: (context, state) => BiblePage()),
       GoRoute(path: '/price', builder: (context, state) => PricePage()),
       GoRoute(
           path: '/prescription',
