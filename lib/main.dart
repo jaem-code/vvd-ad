@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(396, 800), // 디자인 기준 사이즈를 최대 너비에 맞춤
+      designSize: const Size(400, 800), // 디자인 기준 사이즈를 최대 너비에 맞춤
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -185,12 +185,11 @@ class MyApp extends StatelessWidget {
           routerConfig: _router,
         );
 
-        // 화면 너비를 꽉 채우되 최대 396px로 제한
         return Center(
           child: Container(
             width: double.infinity,
             constraints: BoxConstraints(
-              maxWidth: 396,
+              maxWidth: 400,
               minHeight: MediaQuery.of(context).size.height,
             ),
             child: app,
