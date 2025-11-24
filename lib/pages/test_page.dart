@@ -100,6 +100,36 @@ class _TestPageState extends State<TestPage> {
                         SizedBox(height: 40),
                         InkWell(
                           onTap: () {
+                            _launchURL('vivid://hospital');
+                          },
+                          child: SizedBox(
+                            width: 240,
+                            child: Text('병원찾기로 가기'),
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        InkWell(
+                          onTap: () {
+                            _launchURL('vivid://pharmacy');
+                          },
+                          child: SizedBox(
+                            width: 240,
+                            child: Text('약국으로 가기'),
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        InkWell(
+                          onTap: () {
+                            _launchURL('https://deeplink.vvd-health.com/');
+                          },
+                          child: SizedBox(
+                            width: 240,
+                            child: Text('딥링크 가기'),
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        InkWell(
+                          onTap: () {
                             _launchURL(
                                 'https://www.youtube.com/watch?v=S2XdG1Uael8');
                           },
