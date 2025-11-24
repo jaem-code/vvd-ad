@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 0), // 가로는 360으로 고정, 높이는 0으로 설정하여 자동 조정
+      designSize: const Size(360, 800), // 디자인 기준 사이즈 설정
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -185,20 +185,16 @@ class MyApp extends StatelessWidget {
           routerConfig: _router,
         );
 
-        // 웹 환경에서는 360px 고정 너비 적용
-        if (kIsWeb) {
-          return Center(
-            child: Container(
-              width: 360,
-              constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height,
-              ),
-              child: app,
+        // 웹과 모바일 모두 360px 고정 너비 적용
+        return Center(
+          child: Container(
+            width: 360,
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height,
             ),
-          );
-        }
-
-        return app;
+            child: app,
+          ),
+        );
       },
     );
   }
