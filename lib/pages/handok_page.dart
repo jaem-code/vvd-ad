@@ -40,37 +40,49 @@ class _HandokPageState extends State<HandokPage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/f21d3c1e-475d-4dec-af3a-e6942ef96803-c0e0cf60-8d72-4249-9686-1f8a4c6b1455.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/5e0392cf-f82f-44a1-a465-738a38af7b34-14475246-2ead-445a-9b07-66b0149b27a7.jpg'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/5ac3fd99-e04f-4a1a-a4ad-95e8e14af362-d857d951-52f4-4f7e-85d5-57a76c2f15de.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/7204d078-3ce1-420e-a6fb-d37ffced390b-bec66920-cfe5-45ae-93b2-9d277336a3d4.jpg'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/75209e5d-31d4-4dfb-b208-25ebbd979b4f-8798c76c-55ca-4b65-9960-bdaf1f1e3b09.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/33295dd3-55c2-4f18-b6a2-7b0dd931c66a-ba86470f-08ca-44c1-b4dc-175b57aaa85b.jpg'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/be56d516-ee87-41b4-9c55-74de4c604b27-1488d87f-6b57-42f5-961e-9f53338d95db.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/9efb7bcf-6233-4710-9605-4cae8cfd3326-d3d0187d-9bed-4277-95a4-238b5a5da2d8.jpg'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/aadb6516-a177-438e-9770-670161547075-e114b751-a876-47ff-9df3-29065939f328.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/f6e1f192-da01-4f11-a1ea-30c084e94d68-4353d6b7-4be1-4546-8d6f-dcec0b1e08f3.jpg'),
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/d641fea5-4d37-42c0-992b-3b423eb8ecdd-04d0da0a-32d6-4aea-a44f-4a5e376e15ba.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/309272df-a44a-4497-87d7-d9e3c8fcb227-20907ca5-9b52-4f8b-8bb1-43ee8514faee.jpg'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://images.vvd-health.com/back-office/admin/banner/38b6ae3c-c926-4e46-b3b2-6b10ef03da60-c315d0af-7962-49e5-894d-71faa1457c83.jpg'),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://images.vvd-health.com/back-office/admin/banner/62318bdf-b815-4540-8f14-97a1ea6396bf-703d16b2-3dbd-4b45-aa46-36614b5f1aa6.jpg'),
                         ),
                         SizedBox(height: 40),
                       ],
