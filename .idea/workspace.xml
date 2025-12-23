@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="20251202">
-      <change afterPath="$PROJECT_DIR$/lib/pages/review_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    <list default="true" id="9e80babe-694e-4594-af9d-1794a67d2b8c" name="Changes" comment="20251223">
+      <change beforePath="$PROJECT_DIR$/lib/pages/review_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/review_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +81,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750987137873</updated>
-    </task>
-    <task id="LOCAL-00030" summary="-">
-      <option name="closed" value="true" />
-      <created>1755518661932</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1755518661932</updated>
     </task>
     <task id="LOCAL-00031" summary="-">
       <option name="closed" value="true" />
@@ -478,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764647349469</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="20251223">
+      <option name="closed" value="true" />
+      <created>1766470996032</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1766470996032</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -496,6 +492,7 @@
     <MESSAGE value="20251120" />
     <MESSAGE value="20251124" />
     <MESSAGE value="20251202" />
-    <option name="LAST_COMMIT_MESSAGE" value="20251202" />
+    <MESSAGE value="20251223" />
+    <option name="LAST_COMMIT_MESSAGE" value="20251223" />
   </component>
 </project>
