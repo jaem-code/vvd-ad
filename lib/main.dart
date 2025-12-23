@@ -8,6 +8,7 @@ import 'package:vvd_ad/pages/b_page.dart';
 import 'package:vvd_ad/pages/bible_page.dart';
 import 'package:vvd_ad/pages/efficacy_page.dart';
 import 'package:vvd_ad/pages/price_page.dart';
+import 'package:vvd_ad/pages/review_page.dart';
 import 'package:vvd_ad/pages/test_page.dart';
 import 'pages/handok_page.dart';
 import 'pages/home_page.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
       GoRoute(path: '/efficacy', builder: (context, state) => EfficacyPage()),
       GoRoute(path: '/handok', builder: (context, state) => HandokPage()),
       GoRoute(path: '/test', builder: (context, state) => TestPage()),
+      GoRoute(path: '/review', builder: (context, state) => ReviewPage()),
     ],
   );
 
