@@ -40,7 +40,7 @@ class _ReviewPageState extends State<ReviewPage> {
                           width: double.infinity,
                           child: CachedNetworkImage(
                               imageUrl:
-                                  'https://images.vvd-health.com/back-office/admin/banner/f7ca575a-2fdf-4a32-a607-09ba7a420c2f-f5c68ac4-fc7e-47be-acab-8cf91b8e7d39.png'),
+                                  'https://images.vvd-health.com/back-office/admin/banner/c034aae1-c4be-4576-a51f-cbc2afff8f0b-dae8e04f-8055-4bef-a474-a50fb3d1d7c1.png'),
                         ),
                         SizedBox(
                           width: double.infinity,
